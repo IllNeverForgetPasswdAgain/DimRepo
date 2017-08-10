@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DONE</title>
+    <link rel="stylesheet" href="common.css">
+    <script type="text/javascript">
+        /*
+         При данной постановке задачи, потраченное время - полчаса
+        задача выполена в функциональном стиле, т.к. из-за ее простоты и конечной длинны массива
+        использовался innerHTML, не было смысла уложнять себе задачу, создавая конструктор, который бы все равно возвращал такую же строку.
+        При длинне массива равной n, имеет смылсл написание конструктора, способного добавлять столбцы с полным
+        набором стилей с помощью appendChild и с помощью stylesheet.insertRule динамически формировать стили,
+        меняющие ширины столбцов и самой таблицы, позваляющий вместить таким образом неограниченное количество стобцов*/
+        window.onload=function () {
+            let array=[5,8,2,1,15,2,3,5,9,11,10,4,3,14,1,7,10,3,2,13];
+
+        
+            let max = (function( array ){
+                return Math.max.apply( Math, array );
+            })(array);
+            let min = (function( array ){
+                return Math.min.apply( Math, array );
+            })(array);
+
+
+
+                let rowWidth=100/array.length;
+                let contentStr='';
+                let area = document.getElementById("workArea");
+
+                for (let i=0; i<array.length; i++) {
+                    (function (value, index) {
+                        let rowHeight=value/max*100;
+                        contentStr+= '<tr class="qtr" id="q'+index+'"> <th scope="row">'+index+'</th> <td class="sen'+value+' bar " style="height: '+rowHeight+'%;"><p>'+value+'</p></td>  </tr>';
+                        })(array[i], i);
+
+                    area.innerHTML=contentStr;
+                }
+        }
+    </script>
+</head>
+<body>
+<table id="q-graph" onclick="rowCreating(theMainArray)">
+    <caption>Results</caption>
+
+    <tbody id="workArea">
+    <tr class="qtr" id="q1">
+        <th scope="row">Q1</th>
+
+    </tr>
+    <tr class="qtr" id="q2">
+        <th scope="row">Q2</th>
+
+    </tr>
+    <tr class="qtr" id="q3">
+        <th scope="row">Q3</th>
+
+    </tr>
+    <tr class="qtr" id="q4">
+        <th scope="row">Q4</th>
+
+    </tr>
+    </tbody>
+</table>
+
+<div id="ticks">
+    <div class="tick" style="height: 20%;"><p>15</p></div>
+    <div class="tick"  style="height: 20%;"><p>12</p></div>
+    <div class="tick" style="height: 20%;"><p>9</p></div>
+    <div class="tick" style="height: 20%;"><p>6</p></div>
+    <div class="tick" style="height: 20%;"><p>3</p></div>
+
+</div>
+</body>
+</html>

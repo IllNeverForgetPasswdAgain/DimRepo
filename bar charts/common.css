@@ -1,0 +1,255 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "fira-sans-2", Verdana, sans-serif;
+}
+
+#q-graph {
+  display: block;
+
+  position: relative;
+  width: 800px;
+  height: 300px;
+  margin: 1.1em 0 0;
+  padding: 0;
+  background: transparent;
+  font-size: 11px;
+}
+
+#q-graph caption {
+  caption-side: top;
+  width: 800px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  top: -40px;
+  position: relative;
+  z-index: 10;
+  font-weight: bold;
+}
+
+#q-graph tr, #q-graph th, #q-graph td {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#q-graph td {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+#q-graph td:hover {
+  background-color: #4d4d4d;
+  opacity: .9;
+  color: white;
+}
+
+#q-graph thead tr {
+  left: 100%;
+  top: 50%;
+  bottom: auto;
+  margin: -2.5em 0 0 5em;
+}
+
+#q-graph thead th {
+  width: 7.5em;
+  height: auto;
+  padding: 0.5em 1em;
+}
+
+#q-graph thead th.sent {
+  top: 0;
+  left: 0;
+  line-height: 2;
+}
+
+#q-graph thead th.paid {
+  top: 2.75em;
+  line-height: 2;
+  left: 0;
+}
+
+#q-graph tbody tr {
+  height: 296px;
+  padding-top: 2px;
+
+  color: #AAA;
+}
+
+#q-graph #q0 {
+  left: 0;
+}
+
+#q-graph #q1 {
+  left: 25px;
+}
+
+#q-graph #q2 {
+  left: 50px;
+}
+
+#q-graph #q3 {
+  left: 75px;
+  border-right: none;
+}
+
+#q-graph #q4 {
+  left: 100px;
+
+}
+#q-graph #q5 {
+  left: 125px;
+  border-right: none;
+}
+
+#q-graph #q6 {
+  left: 150px;
+  border-right: none;
+}
+#q-graph #q7 {
+  left: 175px;
+  border-right: none;
+}
+
+#q-graph #q8 {
+  left: 200px;
+  border-right: none;
+}
+
+#q-graph #q9 {
+  left: 225px;
+  border-right: none;
+}
+
+#q-graph #q10 {
+  left: 250px;
+  border-right: none;
+}
+
+#q-graph #q11 {
+  left: 275px;
+  border-right: none;
+}
+
+#q-graph #q12 {
+  left: 300px;
+  border-right: none;
+}
+
+#q-graph #q13 {
+  left: 325px;
+  border-right: none;
+}
+
+#q-graph #q14 {
+  left: 350px;
+  border-right: none;
+}
+
+#q-graph #q15 {
+  left: 375px;
+  border-right: none;
+}
+
+#q-graph #q16 {
+  left: 400px;
+  border-right: none;
+}
+
+#q-graph #q17 {
+  left: 425px;
+  border-right: none;
+}
+
+#q-graph #q18 {
+  left: 450px;
+  border-right: none;
+}
+
+#q-graph #q19 {
+  left: 475px;
+  border-right: none;
+}
+
+#q-graph #q20 {
+  left: 500px;
+  border-right: none;
+}
+
+#q-graph tbody th {
+  bottom: -1.75em;
+  vertical-align: top;
+  font-weight: normal;
+  color: #333;
+}
+
+#q-graph .bar {
+  width: 20px;
+  border: 1px solid;
+  border-bottom: none;
+  color: #000;
+}
+
+#q-graph .bar p {
+  margin: 5px 0 0;
+  padding: 0;
+  opacity: .4;
+}
+
+#q-graph .sen1, .sen2, .sen3, .sen4, .sen5 {
+  background-color: green;
+  border-color: transparent;
+}
+
+#q-graph .sen6, .sen7, .sen8, .sen9, .sen10 {
+  background-color: yellow;
+  border-color: transparent;
+}
+
+#q-graph .sen11, .sen12, .sen13, .sen14, .sen15 {
+  background-color: red;
+  border-color: transparent;
+}
+
+#ticks {
+  position: relative;
+  top: -300px;
+  left: 2px;
+  width: 796px;
+  height: 300px;
+  z-index: 1;
+  margin-bottom: -300px;
+  font-size: 10px;
+  font-family: "fira-sans-2", Verdana, sans-serif;
+}
+
+#ticks .tick {
+  position: relative;
+  border-bottom: 1px dotted #C4C4C4;
+  width: 800px;
+}
+
+#ticks .tick p {
+  position: absolute;
+  left: -5em;
+  top: -0.8em;
+  margin: 0 0 0 0.5em;
+}
