@@ -1,0 +1,744 @@
+@import "reset.sass"
+@import "colors.sass"
+@import "fonts.sass"
+@import "sprites.sass"
+
+$minSecHeight: 669px
+
+@mixin font($family, $color, $size, $weight)
+  font-family: $family
+  color: $color
+  font-size: $size
+  font-weight: $weight
+
+
+html
+  font-size: 16px
+
+body
+  background-color: #fff
+
+.wrapper
+  max-width: 1600px
+  width: 100%
+  margin: 0 auto
+
+
+section
+  min-height: $minSecHeight
+  width: 100%
+  position: relative
+
+.container
+  width: 100%
+  max-width: 960px
+  display: block
+  position: relative
+  margin: 0 auto
+
+h1
+  @include font( $Playfair, #fff, 2rem, 900)
+h2
+  @include font( $Playfair, #403d4b, 1.375rem, 700)
+  text-transform: uppercase
+h3
+  @include font( $Roboto, #fff, 1rem, 900)
+  text-transform: uppercase
+
+
+
+header
+  width: 100%
+  position: relative
+
+.header
+  overflow: hidden
+  width: 97%
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: 0
+  z-index: 10
+  padding: 0 10%
+
+
+.header__logo
+  float: left
+  @include font( $Roboto, $fontNavyColor, 1.875rem, 100)
+  padding-top: 17px
+  img, span
+    display: inline-block
+    vertical-align: middle
+.header-nav
+  float: right
+  padding-top: 35px
+
+
+
+.header-nav__list
+  li
+    display: inline-block
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+  a
+    @include font( $Roboto, #fff, 0.813rem, 900)
+    text-transform: uppercase
+    &.active,
+    &:hover
+      color: $fontNavyColor
+      cursor: pointer
+
+
+
+.firstSec
+  min-height: $minSecHeight
+  background:  url('../img/header_background.png') 0 0 no-repeat
+  background-size: cover
+  padding-top: 20%
+  .container
+    bottom: 0
+    text-align: center
+    z-index: 2
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: rgba(33,27,66,.8)
+    display: block
+  &__title
+    position: relative
+    margin-bottom: 25px
+    &:after
+      content: ''
+      margin: 25px auto
+      display: block
+      width: 50px
+      height: 2px
+      border: 1px solid $fontNavyColor
+
+  &__text
+    @include font( $Roboto, #fff, 0.875rem, 300)
+    max-width: 780px
+    line-height: 1.714
+    word-spacing: 5px
+    margin: 0  auto 53px
+
+
+  &__button
+    @include font( $Hammer, $fontNavyColor, 1rem, 400)
+    text-transform: uppercase
+    width: 100%
+    max-width: 120px
+    height: 40px
+    line-height: 40px
+    border: 1px solid $fontNavyColor
+    display: inline-block
+    margin-bottom: 100px
+    text-align: center
+
+  &__textSlider
+    margin: auto
+    width: 100%
+    max-width: 100px
+    height: 20px
+    color: $fontNavyColor
+    li
+      color: $fontNavyColor
+      display: inline-block
+      margin-right: 10px
+    &-controls
+      width: 10px
+      height: 10px
+
+      border: 1px solid $fontNavyColor
+      border-radius: 100%
+      &:hover
+        background: $fontNavyColor
+        cursor: pointer
+
+
+
+.secondSec
+  min-height: $minSecHeight
+  position: relative
+  width: 100%
+  padding: 10% 10%
+  &__logo
+    float: left
+    max-width: 250px
+  &__wrapper
+    float: right
+    position: relative
+    display: inline-block
+    width: 100%
+    max-width: 560px
+    height: 280px
+    text-align: left
+
+  &__title
+    margin-bottom: 30px
+
+  &__text
+    @include font( $Roboto, #403d4b, 0.875rem, 300)
+    line-height: 1.571
+    margin-bottom: 30px
+
+  &__button
+    @include font( $Hammer, $fontNavyColor, 1rem, 400)
+    text-transform: uppercase
+    width: 100%
+    max-width: 120px
+    height: 40px
+    line-height: 40px
+    border: 1px solid $fontNavyColor
+    display: inline-block
+    text-align: center
+
+.thirdSec
+  min-height: $minSecHeight
+  position: relative
+  background:  url('../img/third_backround.png') 0 0 no-repeat
+  background-size: cover
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: rgba(33,27,66,.8)
+    display: block
+  .container
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    z-index: 2
+  &__video
+    width: 100%
+    max-width: 180px
+    height: 180px
+    text-align: center
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+  &__title
+    margin-top: 33px
+  &__play
+    margin: 0 auto
+    &:hover
+      cursor: pointer
+
+iframe
+  width: 100%
+  height: 70%
+  border: none
+
+.relation
+  width: 100%
+  max-width: 900px
+  position: relative
+  &__ratio
+    padding-top: 56.25%
+    height: 0
+  &__content
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 15%
+    left: 0
+
+
+.hidden
+  display: none
+.visible
+  display: block
+
+
+
+.fourthSec
+  position: relative
+  width: 100%
+  padding: 70px 0
+  .container
+    text-align: center
+  &__title
+    color: #000
+    margin-bottom: 15px
+  &__desc
+    @include font( $Playfair, #000, 0.875rem, 400)
+    display: block
+    margin-bottom: 20px
+    &:after
+      content: ''
+      margin: 25px auto 50px
+      display: block
+      width: 55px
+      height: 2px
+      border: 1px solid #655c80
+
+  &__content
+    margin: 0 auto
+    width: 100%
+    max-width: 960px
+    padding: 10px
+    overflow: hidden
+
+  &__row
+
+    width: 100%
+
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    margin: 0 auto
+
+  &__item
+    text-align: center
+
+    width: 30%
+    flex-basis: 240px
+    justify-content: center
+    overflow: hidden
+    &-img
+      margin: 30px auto 35px
+    &-name
+      display: block
+      @include font( $Roboto, #000, 0.875rem, 900)
+      text-transform: uppercase
+      margin-bottom: 25px
+    &-desc
+      display: block
+      @include font( $Roboto, #000, 0.875rem, 300)
+      line-height: 1.5
+      margin-bottom: 25px
+
+.fifthSec
+  background:  url('../img/fifth_background.png') 0 0 no-repeat
+  background-size: cover
+  padding: 70px 0
+  .container
+    z-index: 2
+    text-align: center
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: rgba(33,27,66,.8)
+    display: block
+  &__title
+    color: #fff
+    margin-bottom: 15px
+  &__desc
+    @include font( $Playfair, #fff, 0.875rem, 400)
+    display: block
+    margin-bottom: 20px
+    &:after
+      content: ''
+      margin: 25px auto 50px
+      display: block
+      width: 55px
+      height: 2px
+      border: 1px solid #655c80
+
+
+  &__content
+
+    width: 100%
+    max-width: 940px
+    margin: 0 auto 70px
+    padding: 0 10px
+  &__row
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 0 -20px
+
+
+  &__invitation
+    @include font( $Roboto, #fff, 0.875rem, 300)
+    display: block
+    margin-bottom: 30px
+
+
+  &__button
+    @include font( $Hammer, $fontNavyColor, 1rem, 400)
+    text-transform: uppercase
+    width: 100%
+    max-width: 140px
+    height: 40px
+    line-height: 40px
+    border: 1px solid $fontNavyColor
+    display: inline-block
+    text-align: center
+  &__teammate
+    min-height: 310px
+    max-width: 220px
+    text-align: center
+    border: 1px solid white
+    margin: 10px
+    &-img
+      width: 100%
+      height: 75%
+      background-color: white
+      margin-bottom: 20px
+    &-name
+      @include font( $Roboto, #fff, 0.875rem, 900)
+      text-transform: uppercase
+      display: block
+      padding-bottom: 13px
+    &-post
+      @include font( $Roboto, #fff, 0.813rem, 300)
+      text-transform: uppercase
+      display: block
+
+
+
+.sixthSec
+  position: relative
+  width: 100%
+  padding: 70px 0
+  .container
+    width: 100%
+  &__title
+    float: left
+    margin-left: 15%
+  &__dribble
+    float: right
+    margin-right: 15%
+    @include font( $Roboto, #000, 0.875rem, 300)
+
+  .contain
+    width: 100%
+    overflow: hidden
+    margin: 70px 0
+    text-align: center
+  &__project
+    width: 16%
+    height: 200px
+    background-color: darkgrey
+    border: 1px solid #ddd
+    display: inline-block
+    opacity: 1
+    -webkit-transform: scale(1,1)
+    -webkit-transition-timing-function: ease-out
+    -webkit-transition-duration: 550ms
+    -moz-transform: scale(1,1)
+    -moz-transition-timing-function: ease-out
+    -moz-transition-duration: 550ms
+    &:hover
+      -webkit-transform: scale(1.2,1.2)
+      -webkit-transition-timing-function: ease-out
+      -webkit-transition-duration: 550ms
+      -moz-transform: scale(1.2,1.2)
+      -moz-transition-timing-function: ease-out
+      -moz-transition-duration: 550ms
+
+  &__button
+    @include font( $Hammer, $fontNavyColor, 1rem, 400)
+    text-transform: uppercase
+    width: 100%
+    margin: 0 auto
+    max-width: 140px
+    height: 40px
+    line-height: 40px
+    border: 1px solid $fontNavyColor
+    display: block
+    text-align: center
+
+
+
+.seventhSec
+  background:  url('../img/seventh_backround.png') 0 0 no-repeat
+  background-size: cover
+  padding: 70px 0
+  .container
+    z-index: 2
+    text-align: center
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: rgba(33,27,66,.8)
+    display: block
+  .container
+    text-align: center
+  &____sliderContainer
+    overflow: hidden
+  p
+    @include font( $Playfair, #fff, 1rem, 400)
+    line-height: 1.625
+
+
+.quotes
+  @include font( $Playfair, #fff, 6.25rem, 400)
+
+.seventhSec__name
+  display: block
+  margin-top: 50px
+  @include font( $Roboto, #fff, 0.85rem, 900)
+  line-height: 1.625
+  text-transform: uppercase
+.seventhSec__post
+  display: block
+  @include font( $Roboto, #fff, 0.81rem, 300)
+  line-height: 1.625
+  text-transform: uppercase
+
+.eighthSec
+  position: relative
+  width: 100%
+  padding: 70px 0
+  h2
+    margin-bottom: 35px
+  &__clients
+    float: right
+    max-width: 380px
+  &__form
+    width: 100%
+    float: left
+    max-width: 460px
+
+  &__button
+    @include font( $Hammer, $fontNavyColor, 1rem, 400)
+    text-transform: uppercase
+    width: 100%
+    right: 0
+    max-width: 140px
+    height: 40px
+    line-height: 40px
+    border: 1px solid $fontNavyColor
+    display: block
+    text-align: center
+
+#message
+  width: 100%
+  min-height: 200px
+
+.form-control
+  width: 100%
+  font-family: $Roboto
+  position: relative
+  overflow: hidden
+  input
+    display: block
+    outline: none
+    width: 100%
+    background: #fff
+    border: 1px solid #aaa
+    padding: 5px
+    font-size: 1rem
+    color: #500
+    font-family: inherit
+    cursor: pointer
+  label
+    cursor: pointer
+    display: block
+    position: absolute
+    left: 15px
+    top: 10px
+    color: #aaa
+    font-size: 0.875rem
+    -webkit-transition: .2s
+    transition: .2s
+  input
+    &:valid + label, &:focus + label
+      right: 0
+      font-size: 0.5rem
+
+.clearfix
+  clear: both
+
+
+.ninthSec
+  background:  url('../img/last_background.png') 0 0 no-repeat
+  background-size: cover
+  padding: 70px 0
+  .container
+    z-index: 2
+    text-align: center
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: rgba(33,27,66,.8)
+    display: block
+  &__content
+    margin: 0 auto
+    width: 100%
+    max-width: 960px
+    padding: 10px
+    overflow: hidden
+
+  &__row
+
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: baseline
+    flex-wrap: wrap
+    margin: 0 auto
+  &__item
+    text-align: left
+    width: 100%
+    flex-basis: 280px
+    justify-content: center
+    overflow: hidden
+  &__mainInfo
+    @include font( $Roboto, #fff, 0.875rem, 300)
+    line-height: 1.85
+    margin-top: 40px
+    li
+      span
+        padding-left: 20px
+
+  &__headers
+    @include font( $Roboto, #fff, 0.940rem, 900)
+    line-height: 1.85
+    text-transform: uppercase
+  &__newsletter
+    width: 100%
+    margin-top: 40px
+    min-height: 45px
+
+    position: relative
+    overflow: hidden
+
+  &__social
+    width: 100%
+    margin-top: 30px
+    overflow: hidden
+    display: flex
+    justify-content: space-between
+
+
+
+  &__uderFooter
+    bottom: 0
+    margin-top: 100px
+    overflow: hidden
+    min-height: 100px
+    padding: 20px
+    &-list
+      float: left
+      text-transform: uppercase
+
+      li
+
+        margin-right: 20px
+        display: inline-block
+        a
+          @include font( $Roboto, #fff, 0.875rem, 400)
+        &:last-child
+          margin-right: 0
+
+    &-copyright
+      float: right
+      @include font( $Roboto, #fff, 0.875rem, 400)
+
+.newsletter__input
+  width: 100%
+  max-width: 210px
+  height: 42px
+  padding-left: 10px
+  border: 2px solid #a199b4
+  border-radius: 5px
+  outline: none
+  background: #F9F0DA
+  color: #9E9C9C
+.newsletter__btn
+  position: absolute
+  border: none
+  background: #a199b4
+  cursor: pointer
+  top: 0
+  right: 0
+  height: 42px
+
+#bx-pager
+  margin-top: 50px
+  display: flex
+  justify-content: center
+  overflow: hidden
+  a
+    margin: 10px
+
+
+
+.bxslider
+  border: 0
+  overflow: hidden
+  background: #a199b4
+
+.footer__logo
+
+  @include font( $Roboto, $fontNavyColor, 1.875rem, 100)
+  padding-top: 17px
+  img, span
+    display: inline-block
+    vertical-align: middle
+.onHover
+  &:hover
+    cursor: pointer
+
+@for $i from 1 to 13
+  .col-#{$i}
+    width: calc(8.33333% * #{$i} - 20px)
+
+
+@media screen and (max-width: 900px)
+  .eighthSec__form, .eighthSec__clients
+    float: none
+    display: block
+    margin: 0 auto
+    width: 100%
+    margin-top: 20px
+
+@media screen and (max-width: 768px)
+  html
+    font-size: 14px
+
+@media screen and (max-width: 700px)
+  .firstSec
+    .container
+      margin-top: 20%
+@media screen and (max-width: 600px)
+  .firstSec
+    .container
+      margin-top: 30%
+  .fifthSec__row
+    justify-content: space-around
+  @for $i from 1 to 13
+    .col-md-#{$i}
+      width: calc(8.33333% * #{$i} - 20px)
+
+@media screen and (max-width: 320px)
+  .firstSec
+    .container
+      margin-top: 40%
+  @for $i from 1 to 13
+    .col-min-#{$i}
+      width: calc(8.33333% * #{$i} - 20px)
